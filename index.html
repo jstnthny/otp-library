@@ -8,11 +8,33 @@
     <title>Library</title>
   </head>
   <body>
-    <form action="#">
-      <input type="text" id="title" />
-      <input type="text" id="author" />
-      <button id="submit">Submit</button>
-    </form>
+    <div class="form-container">
+      <form action="#">
+        <div>
+          <label for="title">Book Title:</label>
+          <input type="text" id="title" />
+        </div>
+        <div>
+          <label for="author">Author:</label>
+          <input type="text" id="author" />
+        </div>
+        <div>
+          <label for="pages">Pages:</label>
+          <input type="text" id="pages" />
+        </div>
+        <div>
+          <label for="read">Progress:</label>
+          <input type="text" id="read">
+        </div>
+        <div>
+          <button id="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div class="book-list">
+  
+    </div>
+   
 
     <script src="./js/index.js"></script>
   </body>
