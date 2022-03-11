@@ -34,16 +34,16 @@ function addBookToLibrary() {
 }
 
 function displayNewBook(newBook){
-  let bookList = document.querySelector(".book-list");
-    bookList.innerHTML += `<div class="book"> <ul>Title: ${newBook.title} <li>Author: ${newBook.author} </li>
-        <li> Pages: ${newBook.pages} </li> <li> Progress: ${newBook.read} </li> <ul></div>`
+  let bookList = document.querySelector("tbody");
+    bookList.innerHTML += `<tr> <td>${newBook.title} </td> <td> ${newBook.author} </td>
+        <td> ${newBook.pages} </td> <td> ${newBook.read} </td>`
 }
 
 function displayBooks(){
-  let bookList = document.querySelector(".book-list");
+  let bookList = document.querySelector("tbody");
   for (let i = 0; i <= myLibrary.length; i++){
-    bookList.innerHTML += `<div class="book"> <ul>Title: ${myLibrary[i].title} <li>Author: ${myLibrary[i].author} </li>
-   <li> Pages: ${myLibrary[i].pages} </li> <li> Progress: ${myLibrary[i].read} </li> <ul></div>
+    bookList.innerHTML += `<tr> <td>${myLibrary[i].title} </td> <td> ${myLibrary[i].author} </td>
+   <td>${myLibrary[i].pages} </td> <td>${myLibrary[i].read} </td> </tr>
     ` ;
   }
 
