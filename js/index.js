@@ -49,6 +49,7 @@ function displayNewBook(newBook) {
   let authorData = document.createElement("td");
   let pageData = document.createElement("td");
   let progressData = document.createElement("td");
+  let deleteColumn = document.createElement("td");
   let title = document.createTextNode(newBook.title);
   let author = document.createTextNode(newBook.author);
   let pages = document.createTextNode(newBook.pages);
@@ -60,14 +61,16 @@ function displayNewBook(newBook) {
   newRow.appendChild(authorData);
   newRow.appendChild(pageData);
   newRow.appendChild(progressData);
+  newRow.appendChild(deleteColumn);
   titleData.appendChild(title);
   authorData.appendChild(author);
   pageData.appendChild(pages);
   progressData.appendChild(progress);
 
   const deleteBtn = document.createElement("button");
-  deleteBtn.textContent = "Delete";
-  newRow.appendChild(deleteBtn);
+  deleteBtn.classList.add("btn");
+  deleteBtn.innerHTML = '<i class="material-icons center">delete</i>';
+  deleteColumn.appendChild(deleteBtn);
   deleteBtn.addEventListener("click", () => {
     newRow.remove();
   });

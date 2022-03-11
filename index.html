@@ -4,51 +4,68 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
     <link rel="stylesheet" href="./styles/styles.css" />
     <title>Library</title>
   </head>
   <body>
-    <div class="form-container">
-      <form action="#">
-        <div>
-          <label for="title">Book Title:</label>
-          <input type="text" id="title" />
-        </div>
-        <div>
-          <label for="author">Author:</label>
-          <input type="text" id="author" />
-        </div>
-        <div>
-          <label for="pages">Pages:</label>
-          <input type="text" id="pages" />
-        </div>
-        <div>
-          <label for="read">Progress:</label>
-          <input type="text" id="read">
-        </div>
-        <div>
-          <button id="submit">Submit</button>
-        </div>
-      </form>
-    </div>
-    <!-- <ul class="book-list">
-      
-    </ul> -->
+    <div class="flex-container">
+      <div class="form-container #004d40 teal darken-4">
+        <form action="#">
+          <h1>
+            Reading List
+            <i class="medium material-icons left">library_books</i>
+          </h1>
+          <div>
+            <label for="title">Book Title:</label>
+            <input type="text" id="title" />
+          </div>
+          <div>
+            <label for="author">Author:</label>
+            <input type="text" id="author" />
+          </div>
+          <div>
+            <label for="pages">Pages:</label>
+            <input type="number" id="pages" />
+          </div>
+          <div>
+            <label for="read">Progress:</label>
+            <input type="text" id="read" />
+          </div>
+          <div>
+            <button
+              class="btn waves-effect waves-light"
+              type="submit"
+              name="action"
+              id="submit"
+            >
+              Submit
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+        </form>
+      </div>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Title</th>
-          <th>Author</th>
-          <th>Pages</th>
-          <th>Progress</th>
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-     
-    </table>
-   
+      <table class="striped responsive-table #4db6ac teal lighten-2">
+        <thead>
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Pages</th>
+            <th scope="col">Progress</th>
+            <th scope="col">Delete?</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
 
     <script src="./js/index.js"></script>
   </body>
