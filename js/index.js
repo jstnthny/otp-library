@@ -25,8 +25,18 @@ function addBookToLibrary() {
   let newBookRead = document.querySelector("#read").value;
   let test = new Book(newBookTitle, newBookAuthor, newBookPages, newBookRead);
   //   myLibrary.push(newBook);
+  console.log(myLibrary);
+  // console.log(test.title);
   myLibrary.push(test);
   // displayBooks();
+  displayNewBook(test)
+
+}
+
+function displayNewBook(newBook){
+  let bookList = document.querySelector(".book-list");
+    bookList.innerHTML += `<div class="book"> <ul>Title: ${newBook.title} <li>Author: ${newBook.author} </li>
+        <li> Pages: ${newBook.pages} </li> <li> Progress: ${newBook.read} </li> <ul></div>`
 }
 
 function displayBooks(){
@@ -40,8 +50,9 @@ function displayBooks(){
 }
 
 displayBooks();
-// titleDisplay.innerText = myLibrary[0].title;
-// authorDisplay.innerText = myLibrary[0].author;
-// pagesDisplay.innerText = myLibrary[0].pages;
-// readDisplay.innerText = myLibrary[0].read;
-// console.log(myLibrary[0].title + " " + myLibrary[0].author);
+
+
+
+
+
+
