@@ -50,6 +50,20 @@ div.input {
   text-align: right;
 }
 
+.check-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.check-box i {
+  margin-left: 5px;
+}
+
+.status-icon {
+  cursor: pointer;
+}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

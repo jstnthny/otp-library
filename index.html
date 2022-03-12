@@ -35,9 +35,11 @@
             <label for="pages">Pages:</label>
             <input type="number" id="pages" />
           </div>
-          <div>
-            <label for="read">Progress:</label>
-            <input type="text" id="read" />
+          <div class="check-box">
+            Read
+            <i class="small material-icons left status-icon" id="read"
+              >check_box_outline_blank</i
+            >
           </div>
           <div>
             <button
@@ -56,11 +58,21 @@
       <table class="striped responsive-table #4db6ac teal lighten-2">
         <thead>
           <tr>
-            <th scope="col">Title</th>
-            <th scope="col">Author</th>
-            <th scope="col">Pages</th>
-            <th scope="col">Progress</th>
-            <th scope="col">Delete?</th>
+            <th scope="col">
+              Title <i class="small material-icons left">book</i>
+            </th>
+            <th scope="col">
+              Author <i class="small material-icons left">person</i>
+            </th>
+            <th scope="col">
+              Pages<i class="small material-icons left">import_contacts</i>
+            </th>
+            <th scope="col">
+              Progress<i class="small material-icons left">equalizer</i>
+            </th>
+            <th scope="col">
+              Delete?<i class="small material-icons left">delete_forever</i>
+            </th>
           </tr>
         </thead>
         <tbody></tbody>
