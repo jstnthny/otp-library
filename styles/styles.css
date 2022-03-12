@@ -54,6 +54,7 @@ div.input {
   display: flex;
   flex-direction: row;
   align-items: center;
+  color: whitesmoke;
 }
 
 .check-box i {
@@ -102,7 +103,7 @@ table {
   table-layout: fixed;
   width: 50%;
   border-collapse: collapse;
-  /* border: 3px solid black; */
+
   margin: 5rem auto;
   color: #fafafa;
   height: 0;
@@ -111,26 +112,6 @@ table {
 table th {
   color: #fafafa;
 }
-/* 
-thead th:nth-child(1) {
-  width: 30%;
-}
-
-thead th:nth-child(2) {
-  width: 25%;
-}
-
-thead th:nth-child(3) {
-  width: 10%;
-}
-
-thead th:nth-child(4) {
-  width: 15%;
-}
-
-thead th:nth-child(5) {
-  width: 20%;
-} */
 
 th,
 td {
@@ -157,4 +138,28 @@ thead th,
 tfoot th,
 tfoot td {
   border: 3px solid #004d40;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 810px) {
+  .flex-container {
+    display: block;
+  }
+
+  .form-container {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+
+  table {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 810px) {
+  thead th {
+    font-size: 10px;
+    text-align: left;
+  }
 }
