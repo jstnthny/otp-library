@@ -1,4 +1,5 @@
 const button = document.querySelector("#submit");
+const form = document.querySelector("#form");
 
 let myLibrary = [];
 
@@ -32,11 +33,17 @@ function addBookToLibrary() {
   let newBookAuthor = document.querySelector("#author").value;
   let newBookPages = document.querySelector("#pages").value;
   let newBookRead = document.querySelector("#read").value;
-  let test = new Book(newBookTitle, newBookAuthor, newBookPages, newBookRead);
+  let newBook = new Book(
+    newBookTitle,
+    newBookAuthor,
+    newBookPages,
+    newBookRead
+  );
 
   console.log(myLibrary);
-  myLibrary.push(test);
-  displayNewBook(test);
+  myLibrary.push(newBook);
+  displayNewBook(newBook);
+  form.reset();
 }
 
 //Function to display new Book
